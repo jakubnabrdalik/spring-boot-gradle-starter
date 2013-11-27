@@ -1,0 +1,17 @@
+<div class="text-center">
+    <h1>My entities</h1>
+
+    <div ng-repeat="entity in entities" class="jumbotron">
+        <p>Id: {{entity.id}}, Amount: {{entity.amount}}, Date: {{entity.someDate | date:'yyyy-MM-dd HH:mm'}}</p>
+    </div>
+
+    <div class="jumbotron text-right" ng-controller="NewEntityFormController">
+        <h1>Get a new one</h1>
+        <p style="color: red">{{errorMessage}}</p>
+        <p>
+            <label>Amount</label>
+            <input type="number" required ng-model="newEntity.someAmount">
+        </p>
+        <p><a href="" ng-click="submit()">Submit</a></p>
+    </div>
+</div>
